@@ -4,6 +4,31 @@
         "mimeType": "image/x-mkcd-f4",
         "displayName": "spieler"
     },
+    "image2": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADADAAAAAAAwOzMDAAAAADAzMzMDAAAAMzMzAwAAAADzMzMzAABVBfMzMwMAAFUF8zMzAwAAVQXzMzMDAAAAAPMzMzMDAAAAMzMzAwAAAAAwMzMzAAAAAAAzAwAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "sparen"
+    },
+    "image4": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAOQAAAAAAAAAJAAAAAAAAAAkDgAAAAAAQCICAAAAAABAJ+IAAAAAAEAi4gAAAAAAJCLiAAAAAAAkIucOAAAAQCQn4g4AAABAJCLkAAAAAABARAAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "pizza"
+    },
+    "image3": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4AAAAAAAAADuiIiICADg7u6ImYgIAADu7oiZiAgA4O7uiIiICADu7u6IiO4OAO7u7oiI7g4A4O7uiIiICAAA7u6ImYgIAADg7oiZiAgAAADuiIiICAAAAOAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "miete"
+    },
+    "image5": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAC7uwsAAAAAsLvLuwAAAACwzLu8AAAAALvMu7sAAAAAu7u7AAAAAAC7uwsAAAAAALu7CwAAAAAAu7sLAAAAAAC7uwsAAAAAALu7uwAAAAAAu8y7uwAAAACwzLu8AAAAALC7y7sAAAAAALu7CwAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "konsole"
+    },
+    "image6": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/wAAAAAAAPARDwAADwAA8BIPAPDxAAAvIg8A8CH//yLyAADwISIiIvIAAPAhIiIi8gAA8CEiIhEPAADwIf8f8QAAAPDxAPAPAAAAAA8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "socke"
+    },
     "*": {
         "mimeType": "image/x-mkcd-f4",
         "dataEncoding": "base64",

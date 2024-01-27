@@ -25,15 +25,20 @@ function reduziereBudget (num: number) {
     }
 }
 function budgetAktualisieren () {
-    budgetSprite = textsprite.create("" + convertToText(budget) + " Eur")
+    budgetSprite.setText("" + convertToText(budget) + " Eur")
     budgetSprite.top = 5
     budgetSprite.right = scene.screenWidth() - 5
 }
-let budgetSprite: TextSprite = null
 let budget = 0
+let budgetSprite: TextSprite = null
 let spieler: Sprite = null
+game.setGameOverEffect(true, effects.confetti)
+game.setGameOverPlayable(true, music.melodyPlayable(music.baDing), false)
+game.setGameOverEffect(false, effects.dissolve)
+game.setGameOverPlayable(false, music.melodyPlayable(music.bigCrash), false)
 spieler = sprites.create(assets.image`spieler`, SpriteKind.Player)
 spieler.left = spieler.width * 4
 spieler.bottom = scene.screenHeight()
+budgetSprite = textsprite.create("")
 budget = 2640
 budgetAktualisieren()
