@@ -95,6 +95,7 @@ function menueAnzeigen () {
         spriteMenueText.setText("START")
     }
     spriteMenueBudget = textsprite.create("Restbudget " + ("" + convertToText(budget) + " EUR"), 0, 15)
+    spriteMenueBudget.setKind(SpriteKind.Menue)
     spriteMenueBudget.left = 25
     spriteMenueBudget.top = 40
     spriteMenueSparen = textsprite.create("200 EUR", 0, 15)
@@ -173,11 +174,11 @@ game.onUpdateInterval(500, function () {
             spriteAusgabe.top = spriteAusgabe.top + spriteAusgabe.height
             if (spriteAusgabe.bottom > scene.screenHeight() - spriteAusgabe.height) {
                 if (spriteAusgabe.left != spriteSpieler.left) {
-                    music.play(music.melodyPlayable(music.bigCrash), music.PlaybackMode.InBackground)
+                    music.play(music.melodyPlayable(music.pewPew), music.PlaybackMode.InBackground)
                     spriteAusgabe.startEffect(effects.spray, 500)
                     reduziereLeben()
                 } else {
-                    music.play(music.melodyPlayable(music.beamUp), music.PlaybackMode.InBackground)
+                    music.play(music.melodyPlayable(music.powerUp), music.PlaybackMode.InBackground)
                     if (spriteAusgabe.kind() == SpriteKind.Sparen) {
                         reduziereBudget(200)
                     } else if (spriteAusgabe.kind() == SpriteKind.Essen) {
