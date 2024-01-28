@@ -20,7 +20,7 @@ function ausgabeErstellen () {
         spriteNeueAusgabe = sprites.create(assets.image`spass`, SpriteKind.Spass)
     }
     spriteNeueAusgabe.top = 16
-    spriteNeueAusgabe.left = 16 * randint(1, 7)
+    spriteNeueAusgabe.left = 16 * randint(1, 8)
     spritesAlleAusgabe.push(spriteNeueAusgabe)
 }
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
@@ -171,6 +171,7 @@ game.onUpdateInterval(500, function () {
                     spriteAusgabe.startEffect(effects.spray, 500)
                     reduziereLeben()
                 } else {
+                    music.play(music.melodyPlayable(music.beamUp), music.PlaybackMode.InBackground)
                     if (spriteAusgabe.kind() == SpriteKind.Sparen) {
                         reduziereBudget(200)
                     } else if (spriteAusgabe.kind() == SpriteKind.Essen) {
