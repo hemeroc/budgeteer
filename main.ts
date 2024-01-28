@@ -66,7 +66,6 @@ function spielStarten () {
     spriteLeben.top = 3
     spriteLeben.setIcon(assets.image`leben`)
     spriteBudget = textsprite.create("", 0, 15)
-    budget = 2640
     budgetAktualisieren()
     ausgabeErstellen()
 }
@@ -89,37 +88,40 @@ function menueAnzeigen () {
     spriteMenueText.setIcon(assets.image`pressA`)
     spriteMenueText.setMaxFontHeight(16)
     spriteMenueText.left = 45
-    spriteMenueText.top = 15
+    spriteMenueText.top = 10
     if (istSpielPausiert) {
         spriteMenueText.setText("PAUSE")
     } else {
         spriteMenueText.setText("START")
     }
+    spriteMenueBudget = textsprite.create("Restbudget " + ("" + convertToText(budget) + " EUR"), 0, 15)
+    spriteMenueBudget.left = 25
+    spriteMenueBudget.top = 40
     spriteMenueSparen = textsprite.create("200 EUR", 0, 15)
     spriteMenueSparen.setKind(SpriteKind.Menue)
     spriteMenueSparen.setIcon(assets.image`sparen`)
     spriteMenueSparen.left = 55
-    spriteMenueSparen.top = 50
+    spriteMenueSparen.top = 55
     spriteMenueEssen = textsprite.create("25 EUR", 0, 15)
     spriteMenueEssen.setKind(SpriteKind.Menue)
     spriteMenueEssen.setIcon(assets.image`essen`)
     spriteMenueEssen.left = 20
-    spriteMenueEssen.top = 70
+    spriteMenueEssen.top = 75
     spriteMenueSpass = textsprite.create("50 EUR", 0, 15)
     spriteMenueSpass.setKind(SpriteKind.Menue)
     spriteMenueSpass.setIcon(assets.image`spass`)
     spriteMenueSpass.left = 20
-    spriteMenueSpass.top = 90
+    spriteMenueSpass.top = 95
     spriteMenueKleidung = textsprite.create("100 EUR", 0, 15)
     spriteMenueKleidung.setKind(SpriteKind.Menue)
     spriteMenueKleidung.setIcon(assets.image`kleidung`)
     spriteMenueKleidung.left = 80
-    spriteMenueKleidung.top = 70
+    spriteMenueKleidung.top = 75
     spriteMenueWohnen = textsprite.create("500 EUR", 0, 15)
     spriteMenueWohnen.setKind(SpriteKind.Menue)
     spriteMenueWohnen.setIcon(assets.image`wohnen`)
     spriteMenueWohnen.left = 80
-    spriteMenueWohnen.top = 90
+    spriteMenueWohnen.top = 95
 }
 function reduziereBudget (num: number) {
     budget = budget - num
@@ -141,9 +143,9 @@ let spriteMenueKleidung: TextSprite = null
 let spriteMenueSpass: TextSprite = null
 let spriteMenueEssen: TextSprite = null
 let spriteMenueSparen: TextSprite = null
+let spriteMenueBudget: TextSprite = null
 let spriteMenueText: TextSprite = null
 let spriteMenueHintergrund: Sprite = null
-let budget = 0
 let spriteBudget: TextSprite = null
 let spriteLeben: TextSprite = null
 let leben = 0
@@ -151,6 +153,7 @@ let spriteSpieler: Sprite = null
 let spritesAlleAusgabe: Sprite[] = []
 let spriteNeueAusgabe: Sprite = null
 let zufallsausgabe = 0
+let budget = 0
 let istSpielPausiert = false
 let istSpielGestartet = false
 scene.setBackgroundColor(1)
@@ -160,6 +163,9 @@ game.setGameOverEffect(false, effects.dissolve)
 game.setGameOverPlayable(false, music.melodyPlayable(music.bigCrash), false)
 istSpielGestartet = false
 istSpielPausiert = false
+game.setGameOverMessage(false, "Versuch es nochmal")
+game.setGameOverMessage(true, "Geschafft <3")
+budget = 2640
 menueAnzeigen()
 game.onUpdateInterval(500, function () {
     if (istSpielGestartet && !(istSpielPausiert)) {
